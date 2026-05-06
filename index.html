@@ -2,73 +2,65 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoción Especial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Promoción Exclusiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    
     <style>
-        /* Estilos Base */
-        body, html {
+        :root {
+            --bg-dark: #0a0a0b;
+            --accent-color: #00ff88; /* Verde neón típico de Atlantis/Gaming */
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #000000; /* Fondo negro sólido para evitar errores de carga */
-            color: #ffffff;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-main);
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        /* Contenedor con efecto de cristal */
-        .main-card {
-            width: 90%;
-            max-width: 400px;
-            padding: 40px 20px;
+            min-height: 100vh;
             text-align: center;
-            background: linear-gradient(145deg, #1a1a1a, #000000);
-            border: 2px solid #333;
-            border-radius: 25px;
-            box-shadow: 0px 0px 30px rgba(0, 255, 150, 0.1); /* Sutil brillo */
         }
 
-        /* Animación del Título */
+        /* Contenedor tipo Tarjeta */
+        .wrapper {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 25px;
+        }
+
+        /* Estilo del Logo / Icono */
+        .brand-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), #00b35f);
+            border-radius: 20px;
+            margin: 0 auto 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+
         h1 {
-            font-size: 24px;
-            color: #00ff95; /* Verde neón tipo gaming */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            margin-bottom: 12px;
             text-transform: uppercase;
-            margin-bottom: 15px;
             letter-spacing: 1px;
         }
 
         p {
             font-size: 16px;
-            color: #cccccc;
-            margin-bottom: 30px;
-            line-height: 1.4;
-        }
-
-        /* BOTÓN CORREGIDO CON ANIMACIÓN */
-        .btn-link {
-            display: block;
-            background-color: #00ff95;
-            color: #000000;
-            text-decoration: none;
-            padding: 18px;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 12px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 255, 149, 0.4);
-            animation: expand-contract 2s infinite;
-        }
-
-        .btn-link:active {
-            transform: scale(0.95);
-        }
-
-        /* Animación de latido para el botón */
-        @keyframes expand-contract {
-            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 255, 149, 0.4); }
-            50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(0, 255, 149, 0.7); }
-            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 25
+            color
