@@ -2,90 +2,102 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoción Activa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Acceso VIP</title>
     <style>
-        /* Reset total para evitar bloqueos de estilos */
-        body, html {
+        /* Base del sitio */
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
-            background-color: #0a0a0b; /* Fondo oscuro */
+            height: 100vh;
+            background-color: #000000; /* Fondo negro total */
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
         }
 
-        /* Contenedor principal con visibilidad garantizada */
-        .container {
+        /* Contenedor que evita que se vea negro vacío */
+        .content-box {
             width: 90%;
-            max-width: 400px;
+            max-width: 380px;
             text-align: center;
-            padding: 30px;
-            background-color: #161618; /* Color gris muy oscuro para contraste */
-            border: 2px solid #27272a;
-            border-radius: 20px;
-            box-sizing: border-box;
+            padding: 40px 20px;
+            background: #111111; /* Un gris muy oscuro para dar contraste al fondo */
+            border: 1px solid #222222;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
         }
 
-        /* Título en verde neón */
+        /* Título */
         h1 {
-            color: #00ff88; 
-            font-size: 28px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        /* Texto descriptivo */
-        p {
             color: #ffffff;
-            font-size: 16px;
-            margin-bottom: 30px;
-            line-height: 1.5;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Botón de acción principal */
-        .btn {
+        /* Texto de apoyo */
+        p {
+            color: #888888;
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 30px;
+        }
+
+        /* EL BOTÓN ESTILO ATLANTIS */
+        .main-button {
             display: block;
-            background-color: #00ff88;
+            width: 100%;
+            background-color: #00ff88; /* Verde neón característico */
             color: #000000;
             text-decoration: none;
-            padding: 20px;
-            font-weight: bold;
+            padding: 18px 0;
             font-size: 18px;
+            font-weight: 800;
             border-radius: 12px;
             text-transform: uppercase;
-            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
-            transition: transform 0.2s;
-            animation: pulse 1.5s infinite;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+            transition: all 0.2s ease;
+            animation: pulse-animation 2s infinite;
         }
 
-        /* Animación de latido para que el botón se mueva solo */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .main-button:active {
+            transform: scale(0.95);
+            background-color: #00e67a;
         }
 
+        /* Animación de latido para llamar la atención */
+        @keyframes pulse-animation {
+            0% { transform: scale(1); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3); }
+            50% { transform: scale(1.03); box-shadow: 0 5px 25px rgba(0, 255, 136, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3); }
+        }
+
+        /* Footer */
         .footer {
-            margin-top: 25px;
-            color: #555555;
-            font-size: 12px;
+            margin-top: 30px;
+            font-size: 11px;
+            color: #444444;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>BONO ACTIVADO</h1>
-        <p>Tu acceso exclusivo ha sido validado. Haz clic en el botón de abajo para reclamar tu premio.</p>
-        
-        <a href="#" class="btn">ENTRAR AHORA</a>
+    <div class="content-box">
+        <h1>Bono Disponible</h1>
+        <p>Tu cuenta ha sido seleccionada para una promoción exclusiva. Haz clic debajo para activar.</p>
+
+        <!-- PEGA TU LINK AQUÍ -->
+        <a href="TU_LINK_AQUI" class="main-button">ENTRAR AHORA</a>
 
         <div class="footer">
-            Válido solo para hoy • +18 años
+            SOPORTE EN VIVO • +18 AÑOS
         </div>
     </div>
 
