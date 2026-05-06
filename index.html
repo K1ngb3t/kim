@@ -2,65 +2,92 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Promoción Exclusiva</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción Activa</title>
     <style>
-        :root {
-            --bg-dark: #0a0a0b;
-            --accent-color: #00ff88; /* Verde neón típico de Atlantis/Gaming */
-            --text-main: #ffffff;
-            --text-dim: #a0a0a0;
-        }
-
-        * {
+        /* Reset total para evitar bloqueos de estilos */
+        body, html {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            font-family: 'Roboto', sans-serif;
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        /* Contenedor tipo Tarjeta */
-        .wrapper {
             width: 100%;
-            max-width: 420px;
-            padding: 40px 25px;
-        }
-
-        /* Estilo del Logo / Icono */
-        .brand-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--accent-color), #00b35f);
-            border-radius: 20px;
-            margin: 0 auto 25px;
+            height: 100%;
+            background-color: #0a0a0b; /* Fondo oscuro */
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
-            animation: float 3s ease-in-out infinite;
+            font-family: Arial, sans-serif;
         }
 
+        /* Contenedor principal con visibilidad garantizada */
+        .container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 30px;
+            background-color: #161618; /* Color gris muy oscuro para contraste */
+            border: 2px solid #27272a;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Título en verde neón */
         h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
-            margin-bottom: 12px;
+            color: #00ff88; 
+            font-size: 28px;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
+        /* Texto descriptivo */
         p {
+            color: #ffffff;
             font-size: 16px;
-            color
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Botón de acción principal */
+        .btn {
+            display: block;
+            background-color: #00ff88;
+            color: #000000;
+            text-decoration: none;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+            transition: transform 0.2s;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Animación de latido para que el botón se mueva solo */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .footer {
+            margin-top: 25px;
+            color: #555555;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>BONO ACTIVADO</h1>
+        <p>Tu acceso exclusivo ha sido validado. Haz clic en el botón de abajo para reclamar tu premio.</p>
+        
+        <a href="#" class="btn">ENTRAR AHORA</a>
+
+        <div class="footer">
+            Válido solo para hoy • +18 años
+        </div>
+    </div>
+
+</body>
+</html>
